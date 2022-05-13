@@ -1,25 +1,34 @@
 import UsersItem from "./UserItem";
-import { useState } from "react";
 
 
-
-
-
-const UserList =()=>{
-
-  const[users,setUsers] = useState('')
-
- 
-  
-  
-    return(
-     <>
-     <UsersItem/>
-     
-     </>
-   )
-    
+type Props = {
+  users: [],
+  edit: (id: string) => void,
+  handleDelete: (id: string) => void,
 }
-  export default UserList;
-  
-  // load users list below user item
+
+const UserList = ({ users, edit, handleDelete }: Props) => {
+
+  return (
+    <>
+      <UsersItem />
+      <br></br>
+
+      {users.map((user: any) =>
+
+        <div key={user.id} >
+
+          {user.firstName} {user.lastName} {user.date} {user.options} {user.position}
+
+          <button onClick={() => edit(user.id)}>EDIT</button>
+          <button onClick={() => handleDelete(user.id)}>DELETE</button>
+
+        </div>)}
+    </>
+  );
+}
+
+export default UserList;
+
+
+

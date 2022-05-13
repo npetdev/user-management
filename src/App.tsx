@@ -1,19 +1,17 @@
 import './App.css';
 import Users from './components/Users';
 
+const App = () => {
 
 
-function App() {
- 
- 
- 
-  return (
-     
-    <div className="App">
-       <Users/>
-   </div>
-  
-  );
+   return (
+
+      <div className="App">
+         <Users />
+      </div>
+
+   );
 }
 
 export default App;
+
