@@ -1,26 +1,39 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import "./styles/App.scss";
+import { Routes, Route } from "react-router-dom";
+import { UsersAndCompaniesProvider } from "./context/Context";
+import LayoutApp from "./layouts/LayoutApp";
+import Users from "./components/users/Users";
+import Companies from "./components/companies/Companies";
+import Newsletter from "./components/NewsletterComponents/Newsletter";
+import Weather from "./components/weather/Weather";
+import WelcomePage from "./pages/WelcomePage";
+import NotExistPage from "./pages/NonExistingPage";
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Routes>
+      <Route path="/" element={<LayoutApp />}>
+        <Route index element={<WelcomePage />} />
+        <Route
+          path="users"
+          element={
+            <UsersAndCompaniesProvider>
+              <Users />
+            </UsersAndCompaniesProvider>
+          }
+        />
+        <Route
+          path="companies"
+          element={
+            <UsersAndCompaniesProvider>
+              <Companies />
+            </UsersAndCompaniesProvider>
+          }
+        />
+        <Route path="newsletter" element={<Newsletter />} />
+        <Route path="detailsweather" element={<Weather />} />
+        <Route path="*" element={<NotExistPage />} />
+      </Route>
+    </Routes>
   );
-}
-
+};
 export default App;
