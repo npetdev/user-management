@@ -10,19 +10,20 @@ export const useGeolocation = () => {
   });
 
   useEffect(() => {
-    const getCoords = async () =>
+    (async () => {
       navigator.geolocation
         ? navigator.geolocation.getCurrentPosition(
             (position) => {
-              setGeolocation({
+              const coordinates = {
                 latitude: position.coords.latitude.toString(),
                 longitude: position.coords.longitude.toString(),
-              });
+              };
+              setGeolocation(coordinates);
             },
             (error) => console.error("Geolocation error:", error)
           )
         : console.error("Geolocation is not supported by this browser.");
-    getCoords();
+    })();
   }, []);
 
   return geolocation;

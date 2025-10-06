@@ -1,6 +1,7 @@
 import { Card, Space, Spin, Typography } from "antd";
 
 const { Text } = Typography;
+
 type WeatherData = {
   name: string;
   main: {
@@ -8,6 +9,7 @@ type WeatherData = {
   };
   weather: { description: string }[];
 };
+
 type WeatherTooltipContentProps = {
   loading: boolean;
   error: string | null;
@@ -19,22 +21,29 @@ export const WeatherTooltipContent: React.FC<WeatherTooltipContentProps> = ({
   error,
   weatherData,
 }) => {
-  if (loading) return <Spin size="small" />;
-  if (error) return <Text type="danger">{error}</Text>;
-  if (weatherData) {
-    return (
-      <Card
-        size="small"
-        variant="borderless"
-        style={{ textAlign: "center", background: "#f0f5ff" }}
-      >
+  return (
+    <Card
+      size="small"
+      style={{
+        textAlign: "center",
+        background: "#f0f5ff",
+        minWidth: 140,
+        borderRadius: 8,
+      }}
+    >
+      {loading ? (
+        <Spin size="small" />
+      ) : error ? (
+        <Text type="danger">{error}</Text>
+      ) : weatherData ? (
         <Space direction="vertical" size="small">
           <Text strong>{weatherData.name}</Text>
-          <Text>{weatherData.main.temp}°C</Text>
+          <Text>{Math.round(weatherData.main.temp)}°C</Text>
           <Text type="secondary">{weatherData.weather[0].description}</Text>
         </Space>
-      </Card>
-    );
-  }
-  return <>Nema podataka</>;
+      ) : (
+        <Text type="secondary">Nema podataka</Text>
+      )}
+    </Card>
+  );
 };
