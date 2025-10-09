@@ -3,9 +3,9 @@ const { Title } = Typography;
 
 const CommentsItem: React.FC = () => {
   return (
-    <div style={{ textAlign: "center", marginBottom: "1rem" }}>
-      <Title level={3}>Comments</Title>
-    </div>
+    <Title level={3} style={{ textAlign: "center" }}>
+      Comments
+    </Title>
   );
 };
 
