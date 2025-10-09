@@ -18,7 +18,7 @@ const Weather: React.FC = () => {
       color="white"
     >
       <Button
-        type="primary"
+        type="default"
         icon={<CloudOutlined />}
         onMouseEnter={fetchWeather}
       >
