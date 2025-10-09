@@ -4,11 +4,11 @@ const { Title } = Typography;
 
 const PostsItem: React.FC = () => {
   return (
-    <div style={{ textAlign: "center", margin: "24px 0" }}>
-      <Title level={2} style={{ color: "#1890ff", fontWeight: "bold" }}>
+  
+      <Title level={2} style={{ color: "#1890ff",textAlign: "center", margin: "30px 0px 42px 0px"  }}>
         Newsletter
       </Title>
-    </div>
+
   );
 };
 

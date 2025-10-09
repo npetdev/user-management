@@ -15,7 +15,7 @@ const PostsForm: React.FC<PostsFormProps> = ({
   handleDeletePost,
 }) => {
   return (
-    <Card style={{ margin: "20px" }}>
+    <Card>
       <Form layout="vertical" onFinish={handleEditPost}>
         <Form.Item label="Title">
           <TextArea

@@ -27,8 +27,8 @@ const Newsletter: React.FC = () => {
   };
 
   return (
-    <Layout style={{ minHeight: "100vh" }}>
-      <Content style={{ padding: "24px" }}>
+    <Layout>
+      <Content>
         {!postId && (
           <>
             <PostsItem />
@@ -40,7 +40,7 @@ const Newsletter: React.FC = () => {
           </>
         )}
 
-        {postId !== 0 && !commentId &&(
+        {postId !== 0 && !commentId && (
           <>
             <PostDetails />
             <PostsForm
@@ -56,11 +56,13 @@ const Newsletter: React.FC = () => {
             <CommentsList setCommentId={setComment} comments={comments} />
           </>
         )}
-       { commentId !==0 && <CommentBodyModal
-          commentId={commentId}
-          comments={comments}
-          setComentsId={setCommentId}
-        />}
+        {commentId !== 0 && (
+          <CommentBodyModal
+            commentId={commentId}
+            comments={comments}
+            setComentsId={setCommentId}
+          />
+        )}
       </Content>
     </Layout>
   );
