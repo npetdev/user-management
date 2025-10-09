@@ -20,13 +20,8 @@ const UsersAddAction: React.FC = () => {
   };
 
   return (
-    <Card
-      style={{
-        borderRadius: 8,
-        boxShadow: "0 2px 8px rgba(0,0,0,0.1)",
-      }}
-    >
-      <Row justify="space-between" align="middle">
+    <Card className="add-action-card">
+      <Row className="add-action-row" >
         <Col>
           <Title level={3} style={{ margin: 0 }}>
             Users

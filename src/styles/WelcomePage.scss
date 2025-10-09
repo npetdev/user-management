@@ -1,0 +1,108 @@
+// SCSS Variables for colors and common values
+$color-blue: #1677ff;
+$color-green: #52c41a;
+$color-pink: #eb2f96;
+$color-dark: #333;
+$color-medium: #555;
+$bg-light-1: #e0f7fa;
+$bg-light-2: #fce4ec;
+$color-white: #fff;
+$shadow-card: 0 6px 18px rgba(0, 0, 0, 0.08);
+@mixin icon-base($color) {
+  font-size: 40px;
+  color: $color;
+}
+.icon {
+  &-company {
+    @include icon-base($color-blue);
+  }
+  &-user {
+    @include icon-base($color-green);
+  }
+  &-newsletter {
+    @include icon-base($color-pink);
+  }
+}
+
+.layout {
+  min-height: 100vh;
+  background: linear-gradient(135deg, $bg-light-1, $bg-light-2);
+  overflow-x: hidden;
+
+  &-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 16px 60px;
+  }
+}
+
+.hero-section {
+  &-row {
+    justify-content: center;
+    margin-bottom: 40px;
+    width: 100%;
+  }
+  &-col {
+    text-align: center;
+    padding: 0 12px;
+  }
+}
+
+.hero {
+  &-title {
+    color: $color-dark;
+    margin-bottom: 12px;
+    font-size: clamp(26px, 4vw, 40px);
+  }
+  &-paragraph {
+    font-size: clamp(14px, 2vw, 16px);
+    color: $color-medium;
+    margin-bottom: 24;
+    line-height: 1.6;
+  }
+  &-space {
+    justify-content: center;
+  }
+}
+
+.features {
+  &-row {
+    justify-content: center;
+    align-items: center;
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  &-col {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+.feature {
+  &-card {
+    border-radius: 16px;
+    box-shadow: $shadow-card;
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+    padding: 28px 16px;
+    background-color: $color-white;
+    transition: transform 0.3s ease;
+  }
+  &-div-title {
+    margin-bottom: 12px;
+  }
+
+  &.title {
+    margin-bottom: 8px;
+  }
+
+  &-text {
+    font-size: 14px;
+    display: block;
+    margin-bottom: 16px;
+  }
+}

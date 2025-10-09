@@ -14,8 +14,8 @@ const CompaniesAddAction: React.FC = () => {
   };
 
   return (
-    <Card style={{ borderRadius: 8 }}>
-      <Row justify="space-between" align="middle">
+    <Card className="add-action-card">
+      <Row className="add-action-row" >
         <Col>
           <Title level={3} style={{ margin: 0 }}>
             Companies

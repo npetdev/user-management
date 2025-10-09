@@ -1,0 +1,52 @@
+$white: #fff;
+$header-height: 64px;
+$logo-size: 50px;
+$border-width: 2px;
+$border-radius: 6px;
+$gap: 20px;
+$padding-x: 24px;
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flex-center($justify: center, $align: center) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+.layoutApp {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.headerApp {
+  @include flex-center(space-between, center);
+  height: $header-height;
+  padding: 0 $padding-x;
+}
+
+.logo {
+  height: $logo-size;
+  object-fit: contain;
+  border: $border-width solid $white;
+  border-radius: $border-radius;
+}
+
+.logo-link {
+  @include flex-center(flex-start, center);
+}
+
+.menu-items {
+  @include flex-center(flex-start, center);
+  gap: $gap;
+}
+
+.footerApp {
+  text-align: center;
+}

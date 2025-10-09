@@ -50,37 +50,21 @@ const UsersList: React.FC = () => {
           style={{ backgroundColor: index % 2 === 0 ? "#f9f9f9" : "#f0f2f5" }}
         >
           <Row
-            style={{
-              width: "100%",
-              textAlign: "center",
-              justifyContent: "center",
-            }}
+            className="list-management-row"
           >
             <Col span={5}>{`${firstName} ${lastName}`}</Col>
             <Col span={5}>{dayjs(date).format("DD-MM-YYYY")}</Col>
             <Col span={5}>{company}</Col>
             <Col span={5}>{position}</Col>
             <Col span={3}>
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  gap: "16px",
-                  fontSize: "18px",
-                }}
-              >
+              <div className="list-management-col">
                 <EditOutlined
                   onClick={() => handleEdit(id)}
-                  style={{
-                    color: "#1890ff",
-                  }}
+                  className="primary-color"
                 />
                 <DeleteOutlined
                   onClick={() => handleDelete(id)}
-                  style={{
-                    color: "#ff4d4f",
-                  }}
+                  className="danger-color"
                 />
               </div>
             </Col>

@@ -5,13 +5,7 @@ const { Text } = Typography;
 const UsersItem: React.FC = () => {
   return (
     <Row
-      style={{
-        margin: "16px 0px 8px 0px",
-        padding: "16px 0",
-        textAlign: "center",
-        justifyContent: "center",
-        backgroundColor: "#e6e6e6",
-      }}
+      className="item-row"
     >
       <Col span={5}>
         <Text strong>Full Name</Text>
