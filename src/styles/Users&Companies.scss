@@ -1,0 +1,53 @@
+$primary-color: #1890ff;
+$danger-color: #ff4d4f;
+
+@mixin centered($direction: row) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $direction;
+}
+
+
+.list-management-row {
+  width: 100%;
+  text-align: center;
+  @include centered();
+}
+
+.list-management-col {
+  @include centered();
+  gap: 18px;
+  font-size: 18px;
+}
+
+.primary-color {
+  color: $primary-color;
+}
+
+.danger-color {
+  color: $danger-color;
+}
+
+.item-row {
+  margin: 16px 0 8px;
+  padding: 16px 0;
+  text-align: center;
+  background-color: #e6e6e6;
+  @include centered();
+}
+
+.add-action-card {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.add-action-row {
+  @include centered(row);
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.form-management-card {
+  border: none;
+}

@@ -31,6 +31,7 @@ const Companies: React.FC = () => {
       <CompaniesAddAction />
       <CompaniesItem />
       <Modal
+        width={400}
         open={isCompanyFormModalOpen}
         onCancel={handleCancel}
         footer={null}

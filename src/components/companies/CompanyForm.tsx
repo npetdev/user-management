@@ -50,8 +50,7 @@ const CompanyForm: React.FC = () => {
 
   return (
     <Card
-      title={company.id ? "Edit Company" : "New Company"}
-      style={{ maxWidth: 400, margin: "0 auto" }}
+      className="form-management-card"
     >
       <Form layout="vertical" onFinish={handleSubmit} size="small">
         <Form.Item label="Name" required>

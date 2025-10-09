@@ -1,4 +1,6 @@
-import "./styles/App.scss";
+import "./styles/Users&Companies.scss";
+import "./styles/LayoutApp.scss";
+import "./styles/WelcomePage.scss";
 import { Routes, Route } from "react-router-dom";
 import { UsersAndCompaniesProvider } from "./context/Context";
 import LayoutApp from "./layouts/LayoutApp";

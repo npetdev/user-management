@@ -42,28 +42,14 @@ const CompanyList: React.FC = () => {
           key={id}
           style={{ backgroundColor: index % 2 === 0 ? "#f9f9f9" : "#f0f2f5" }}
         >
-          <Row
-            style={{
-              width: "100%",
-              textAlign: "center",
-              justifyContent: "center",
-            }}
-          >
+          <Row className="list-management-row">
             <Col span={4}>{name}</Col>
             <Col span={4}>{country}</Col>
             <Col span={4}>{city}</Col>
             <Col span={2}>{usersComp.length}</Col>
 
             <Col span={5}>
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  gap: "16px",
-                  fontSize: "18px",
-                }}
-              >
+              <div className="list-management-col">
                 <EditOutlined
                   onClick={() => handleEdit(id)}
                   style={{

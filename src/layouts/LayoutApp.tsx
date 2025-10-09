@@ -23,29 +23,12 @@ const LayoutApp: React.FC = () => {
   ];
 
   return (
-    <Layout style={{ minHeight: "100vh" }}>
-      <Header
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-          padding: "0 24px",
-          height: "64px",
-        }}
-      >
-        <Link to="/" style={{ display: "flex", alignItems: "center" }}>
-          <img
-            src={logo}
-            alt="AppLogo"
-            style={{
-              height: "50px",
-              objectFit: "contain",
-              border: "2px solid white",
-              borderRadius: "6px",
-            }}
-          />
+    <Layout className="layoutApp">
+      <Header className="headerApp">
+        <Link to="/" className="logo-link">
+          <img src={logo} alt="AppLogo" className="logo" />
         </Link>
-        <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>
+        <div className="menu-items">
           <Menu
             theme="dark"
             mode="horizontal"
@@ -58,7 +41,7 @@ const LayoutApp: React.FC = () => {
       <Content>
         <Outlet />
       </Content>
-      <Footer style={{ textAlign: "center" }}>
+      <Footer className="footerApp" >
         Management App ©{new Date().getFullYear()} Created with React
       </Footer>
     </Layout>

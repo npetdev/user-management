@@ -68,8 +68,7 @@ const UsersForm: React.FC = () => {
   };
   return (
     <Card
-      title={user.id ? "Edit User" : "New User"}
-      style={{ maxWidth: 400, margin: "0 auto" }}
+      className="form-management-card"
     >
       <Form layout="vertical" onFinish={handleSubmit} size="small">
         <Form.Item label="First Name" required>

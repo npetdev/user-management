@@ -42,7 +42,12 @@ const Users: React.FC = () => {
     <>
       <UsersAddAction />
       <UsersItemExe />
-      <Modal footer={null} open={isUserFormModalOpen} onCancel={handleCancel}>
+      <Modal
+        width={400}
+        footer={null}
+        open={isUserFormModalOpen}
+        onCancel={handleCancel}
+      >
         <UsersForm />
       </Modal>
       {showUsers && (users.length === 0 ? <Empty /> : <UsersList />)}
