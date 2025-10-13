@@ -31,7 +31,6 @@ const WelcomePage: React.FC = () => {
       link: "/newsletter",
     },
   ];
-
   return (
     <Layout className="layout">
       <Content className="layout-content">
@@ -39,13 +38,11 @@ const WelcomePage: React.FC = () => {
         <Row className="hero-section-row">
           <Col xs={24} sm={22} md={18} lg={12} className="hero-section-col">
             <Title className="hero-title">Welcome to Management App</Title>
-
             <Paragraph className="hero-paragraph">
               A simple React + Ant Design demo to manage{" "}
               <Text strong>Companies</Text>, <Text strong>Users</Text>, and{" "}
               <Text strong>Newsletter</Text> posts.
             </Paragraph>
-
             <Space size="middle" wrap className="hero-space">
               <Link to="/companies">
                 <Button size="middle" type="primary">
@@ -60,7 +57,7 @@ const WelcomePage: React.FC = () => {
         </Row>
         <Row gutter={[24, 24]} className="features-row">
           {features.map((item) => (
-            <Col 
+            <Col
               key={item.title}
               xs={24}
               sm={12}
@@ -69,7 +66,6 @@ const WelcomePage: React.FC = () => {
               className="features-col"
             >
               <Card
-              
                 hoverable
                 className="feature-card"
                 onMouseEnter={(e) =>

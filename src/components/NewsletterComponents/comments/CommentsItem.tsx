@@ -8,5 +8,4 @@ const CommentsItem: React.FC = () => {
     </Title>
   );
 };
-
 export default CommentsItem;

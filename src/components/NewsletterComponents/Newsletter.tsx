@@ -22,10 +22,10 @@ const Newsletter: React.FC = () => {
     setPostData,
   } = usePosts();
   const { comments, commentId, setComment, setCommentId } = useComments(postId);
+
   const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     setPostForm({ ...postForm, [e.target.name]: e.target.value });
   };
-
   return (
     <Layout>
       <Content>
@@ -39,7 +39,6 @@ const Newsletter: React.FC = () => {
             )}
           </>
         )}
-
         {postId !== 0 && !commentId && (
           <>
             <PostDetails />

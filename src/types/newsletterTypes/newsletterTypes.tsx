@@ -17,7 +17,6 @@ export type PostsListProps = {
   posts: Post[];
   setPost: (id: number) => void;
 };
-
 export type CommentsListProps = {
   comments: Comment[];
   setCommentId: (id: number) => void;
@@ -27,15 +26,12 @@ export type CommentsProps = {
   commentId: number;
   setComentsId: (id: number) => void;
 };
-
 export type PostActionsProps = {
   id: number;
   handleAction: (id: number) => void;
   loading: boolean;
 };
-
 export type PostForm = { title: string; body: string };
-
 export type PostsFormProps = {
   postId: number;
   postForm: PostForm;

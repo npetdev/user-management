@@ -1,9 +1,11 @@
-import { Layout, Menu } from "antd";
+import { Layout, Menu, Typography } from "antd";
+import { HeartFilled } from "@ant-design/icons";
 import { Link, Outlet, useLocation } from "react-router-dom";
 import Weather from "../components/weather/Weather";
 import logo from "../assets/logo.png";
 
 const { Header, Content, Footer } = Layout;
+const { Text } = Typography;
 
 const LayoutApp: React.FC = () => {
   const location = useLocation();
@@ -41,9 +43,14 @@ const LayoutApp: React.FC = () => {
       <Content>
         <Outlet />
       </Content>
-      <Footer className="footerApp" >
-        Management App ©{new Date().getFullYear()} Created with React
-      </Footer>
+          <Footer
+      className="footerApp"
+    >
+      <Text type="secondary" style={{ fontSize: "14px" }}>
+        <strong>Management App</strong> © {new Date().getFullYear()} — Created with{" "}
+        <HeartFilled style={{ color: "#ff4d4f" }} /> using React
+      </Text>
+    </Footer>
     </Layout>
   );
 };

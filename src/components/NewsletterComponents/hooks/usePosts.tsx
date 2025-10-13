@@ -1,4 +1,3 @@
-// src/hooks/usePosts.ts
 import { useState, useEffect } from "react";
 import api from "../../../services/newsletterService/apiInstance";
 import { Post, PostForm } from "../../../types/newsletterTypes/newsletterTypes";

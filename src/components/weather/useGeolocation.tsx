@@ -1,14 +1,11 @@
 import { useState, useEffect } from "react";
-type Geolocation = {
-  latitude: string | null;
-  longitude: string | null;
-};
+import { Geolocation } from "../../types/weatherTypes/weatherTypes";
+
 export const useGeolocation = () => {
   const [geolocation, setGeolocation] = useState<Geolocation>({
     latitude: null,
     longitude: null,
   });
-
   useEffect(() => {
     (async () => {
       navigator.geolocation
@@ -25,6 +22,5 @@ export const useGeolocation = () => {
         : console.error("Geolocation is not supported by this browser.");
     })();
   }, []);
-
   return geolocation;
 };

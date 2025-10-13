@@ -8,7 +8,6 @@ const CommentBodyModal: React.FC<CommentsProps> = ({
   setComentsId,
 }) => {
   const selectedComment = comments.find((comment) => comment.id === commentId);
-
   return (
     <Modal
       open={!!selectedComment}

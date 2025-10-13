@@ -13,7 +13,7 @@ const UsersAddAction: React.FC = () => {
   const addButton = () => {
     setIsUserFormModalOpen(true);
 
-    // If user is added/edited from company, pre-fill the company name field on form
+    // If user is add/edit from company, pre-fill the company name field on user form
     if (companyForEdit.id) {
       setUser({ ...user, company: companyForEdit.name });
     }

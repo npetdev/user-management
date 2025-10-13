@@ -11,7 +11,6 @@ export const useComments = (postId: number) => {
         const comments = response.data.filter(
           (i: Comment) => i.postId === postId
         );
-
         if (comments) {
           setComments(comments);
         }

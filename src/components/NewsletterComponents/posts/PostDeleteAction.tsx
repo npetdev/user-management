@@ -6,7 +6,6 @@ const PostDeleteAction: React.FC<PostActionsProps> = ({
   handleAction,
   loading,
 }) => {
-  
   return (
     <Button
       type="primary"

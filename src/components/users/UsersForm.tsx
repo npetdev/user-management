@@ -42,7 +42,7 @@ const UsersForm: React.FC = () => {
     const findCompanyId = companies.find(
       (company) => company.name === user.company
     );
-    // If user is edited, update user, else add new user
+    // If user edited - update user, else add new user
     if (userForEdit.id) {
       const updateUsers = users.map((users) =>
         users.id === userForEdit.id

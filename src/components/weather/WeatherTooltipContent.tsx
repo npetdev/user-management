@@ -1,20 +1,6 @@
 import { Card, Space, Spin, Typography } from "antd";
-
+import { WeatherTooltipContentProps } from "../../types/weatherTypes/weatherTypes";
 const { Text } = Typography;
-
-type WeatherData = {
-  name: string;
-  main: {
-    temp: number;
-  };
-  weather: { description: string }[];
-};
-
-type WeatherTooltipContentProps = {
-  loading: boolean;
-  error: string | null;
-  weatherData: WeatherData | null;
-};
 
 export const WeatherTooltipContent: React.FC<WeatherTooltipContentProps> = ({
   loading,

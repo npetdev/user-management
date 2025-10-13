@@ -1,14 +1,8 @@
 import { useState } from "react";
 import { useGeolocation } from "./useGeolocation";
 import api from "../../services/weatherService/apiInstance";
+import { WeatherData } from "../../types/weatherTypes/weatherTypes";
 
-type WeatherData = {
-  name: string;
-  main: {
-    temp: number;
-  };
-  weather: { description: string }[];
-};
 const API_KEY = process.env.REACT_APP_API_KEY;
 
 export const useFetchWeatherData = () => {
@@ -22,7 +16,6 @@ export const useFetchWeatherData = () => {
       setError("Location not available.");
       return;
     }
-
     setLoading(true);
     setError(null);
     try {
@@ -33,7 +26,7 @@ export const useFetchWeatherData = () => {
     } catch (err) {
       setError("Error downloading weather data.");
     } finally {
-     setTimeout(() => setLoading(false), 1000); // Adding slight delay for better UX
+      setTimeout(() => setLoading(false), 1000); // Adding slight delay for better UX
     }
   };
   return { weatherData, loading, error, fetchWeather };
