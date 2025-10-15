@@ -1,6 +1,6 @@
 import { Button, Tooltip } from "antd";
 import { CloudOutlined } from "@ant-design/icons";
-import { useFetchWeatherData } from "./useFetchWeatherData";
+import { useFetchWeatherData } from "../../hooks/useFetchWeatherData";
 import { WeatherTooltipContent } from "./WeatherTooltipContent";
 
 const Weather: React.FC = () => {

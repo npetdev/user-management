@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Geolocation } from "../../types/weatherTypes/weatherTypes";
+import { Geolocation } from "../types/weatherTypes/weatherTypes";
 
 export const useGeolocation = () => {
   const [geolocation, setGeolocation] = useState<Geolocation>({

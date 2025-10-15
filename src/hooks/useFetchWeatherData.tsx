@@ -1,8 +1,7 @@
 import { useState } from "react";
 import { useGeolocation } from "./useGeolocation";
-import api from "../../services/weatherService/apiInstance";
-import { WeatherData } from "../../types/weatherTypes/weatherTypes";
-
+import { WeatherData } from "../types/weatherTypes/weatherTypes";
+import api from "../services/weatherService/apiInstance";
 const API_KEY = process.env.REACT_APP_API_KEY;
 
 export const useFetchWeatherData = () => {

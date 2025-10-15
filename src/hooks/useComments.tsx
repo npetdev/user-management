@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import api from "../../../services/newsletterService/apiInstance";
-import { Comment } from "../../../types/newsletterTypes/newsletterTypes";
+import api from "../services/newsletterService/apiInstance";
+import { Comment } from "../types/newsletterTypes/newsletterTypes";
 export const useComments = (postId: number) => {
   const [comments, setComments] = useState<Comment[]>([]);
   const [commentId, setCommentId] = useState<number>(0);

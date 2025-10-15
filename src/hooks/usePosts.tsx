@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import api from "../../../services/newsletterService/apiInstance";
-import { Post, PostForm } from "../../../types/newsletterTypes/newsletterTypes";
+import api from "../services/newsletterService/apiInstance";
+import { Post, PostForm } from "../types/newsletterTypes/newsletterTypes";
 export const usePosts = () => {
   const [posts, setPosts] = useState<Post[]>([]);
   const [postId, setPostId] = useState<number>(0);

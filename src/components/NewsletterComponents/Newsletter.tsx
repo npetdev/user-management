@@ -6,8 +6,8 @@ import PostDetails from "./posts/PostDetails";
 import CommentBodyModal from "./comments/CommentsBodyModal";
 import CommentsItem from "./comments/CommentsItem";
 import CommentsList from "./comments/CommentsList";
-import { usePosts } from "./hooks/usePosts";
-import { useComments } from "./hooks/useComments";
+import { usePosts } from "../../hooks/usePosts";
+import { useComments } from "../../hooks/useComments";
 const { Content } = Layout;
 const Newsletter: React.FC = () => {
   const {
