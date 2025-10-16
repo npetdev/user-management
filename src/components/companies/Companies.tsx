@@ -8,6 +8,7 @@ import CompanyForm from "./CompanyForm";
 import Users from "../users/Users";
 import CompaniesAddAction from "./CompaniesAddAction";
 import CompaniesItem from "./CompaniesItem";
+
 const Companies: React.FC = () => {
   const contextData = useContext(context);
   const {
@@ -26,6 +27,7 @@ const Companies: React.FC = () => {
     setCompanyForEdit(initCompany);
     setCompany(initCompany);
   };
+
   return (
     <>
       <CompaniesAddAction />
@@ -39,8 +41,20 @@ const Companies: React.FC = () => {
         <CompanyForm />
         {companyForEdit.id && isCompanyFormModalOpen && <Users />}
       </Modal>
-      {companies.length === 0 ? <Empty /> : <CompanyList />}
+
+      {companies.length === 0 ? (
+        <div
+         className="empty"
+        >
+          <Empty
+            description="No companies yet"
+          />
+        </div>
+      ) : (
+        <CompanyList />
+      )}
     </>
   );
 };
+
 export default Companies;

@@ -17,7 +17,7 @@ const CompaniesItem: React.FC = () => {
         <Text strong>City</Text>
       </Col>
       <Col span={2}>
-        <Text strong>No. Users</Text>
+        <Text strong>Users</Text>
       </Col>
       <Col span={5}>
         <Text strong></Text>
