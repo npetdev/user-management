@@ -4,9 +4,7 @@ const { Text } = Typography;
 
 const CompaniesItem: React.FC = () => {
   return (
-    <Row
-      className="item-row"
-    >
+    <Row className="item-row">
       <Col span={4}>
         <Text strong>Name</Text>
       </Col>

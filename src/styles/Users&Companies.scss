@@ -10,28 +10,23 @@ $danger-color: #ff4d4f;
 .empty {
   @include centered();
   height: 50vh;
-  
 }
 .list-management-row {
   width: 100%;
   text-align: center;
   @include centered();
 }
-
 .list-management-col {
   @include centered();
   gap: 1.125rem;
   font-size: 1.125rem;
 }
-
 .primary-color {
   color: $primary-color;
 }
-
 .danger-color {
   color: $danger-color;
 }
-
 .item-row {
   margin: 1rem 0 0.5rem;
   padding: 1rem 0;
@@ -39,12 +34,10 @@ $danger-color: #ff4d4f;
   background-color: #e6e6e6;
   @include centered();
 }
-
 .add-action-card {
   box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.1);
   margin-bottom: 1.25rem;
 }
-
 .add-action-row {
   @include centered(row);
   justify-content: space-between;

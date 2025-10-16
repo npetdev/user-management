@@ -50,13 +50,14 @@ const Users: React.FC = () => {
       >
         <UsersForm />
       </Modal>
-      {showUsers && (users.length === 0 ? <div
-         className="empty"
-        >
-          <Empty
-            description="No users yet"
-          />
-        </div> : <UsersList />)}
+      {showUsers &&
+        (users.length === 0 ? (
+          <div className="empty">
+            <Empty description="No users yet" />
+          </div>
+        ) : (
+          <UsersList />
+        ))}
     </>
   );
 };
